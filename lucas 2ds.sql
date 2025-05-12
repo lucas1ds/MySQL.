@@ -16,7 +16,8 @@ area_plantada varchar(50) not null,
 area_regada varchar(50) not null,
 data_regada date not null,
 quantidade_adubo int,
-adubo varchar(50) not null);
+adubo varchar(50) not null,
+data_adubo date);
 
 create table if not exists colheitas (id bigint auto_increment primary key not null,
 data_colheita date not null,

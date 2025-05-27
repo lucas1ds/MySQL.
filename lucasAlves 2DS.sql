@@ -1,4 +1,5 @@
-create database dropStep
+create database dropStep;
+use dropStep;
 
 create table if not exists Marcas( id bigint auto_increment primary key not null,
 marca_id varchar(50) not null,
@@ -14,7 +15,7 @@ nome varchar(50),
 descricao text);
 
 create table if not exists Produtos (id bigint auto_increment primary key not null,
-nome varchar(50)
+nome varchar(50),
 categoria_id int,
 preco int not null,
 decricao text,
@@ -32,7 +33,7 @@ endereco text);
 
 create table if not exists Pedidos( id bigint auto_increment primary key not null,
 pedido_id int,
-cliente varchar(50) not null,
+cliente_id varchar(50) not null,
 data_pedido date,
 valor_total int,
 metodo_pagamento varchar(50),
@@ -50,3 +51,11 @@ cliente_id int,
 nota int,
 comentario text,
 data_avaliacao date);
+
+
+
+
+
+
+
+

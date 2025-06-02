@@ -7,7 +7,7 @@ pais_origem varchar(50),
 ano_fundacao int,
 descricao varchar(50));
 
-drop table clientes;
+drop table estoque;
 
 
 create table if not exists Categorias (id bigint auto_increment primary key not null,
@@ -43,6 +43,8 @@ endereco_entrega varchar(50) not null);
 create table if not exists Estoque(id bigint auto_increment primary key not null,
 produto_id varchar(50),
 tamanho varchar(50),
+nota_produto varchar(50),
+qualidade_produto varchar(50),
 quantidade varchar(50));
 
 create table if not exists Avaliacoes( id bigint auto_increment primary key not null,

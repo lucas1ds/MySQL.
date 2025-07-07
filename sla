@@ -1,0 +1,31 @@
+create database trabalho_where;
+use trabalho_where;
+
+CREATE TABLE if not exists clientes (id bigint auto_increment primary key not null,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100)
+);
+
+
+CREATE table if not exists pedidos (id bigint auto_increment primary key not null,
+    id_cliente INT,
+    produto VARCHAR(100) NOT NULL,
+    quantidade INT,
+    data_pedido DATE,
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
+);
+
+
+INSERT INTO clientes (id_cliente, nome, email) VALUES
+(1, 'João Silva', 'joao@email.com'),
+(2, 'Maria Santos', 'maria@email.com'),
+(3, 'Carlos Oliveira', 'carlos@email.com'),
+(4, 'Ana Costa', 'ana@email.com');
+
+
+INSERT INTO pedidos (id_pedido, id_cliente, produto, quantidade, data_pedido) VALUES
+(101, 1, 'Notebook', 1, '2023-05-10'),
+(102, 1, 'Mouse', 2, '2023-05-10'),
+(103, 2, 'Teclado', 1, '2023-05-12'),
+(104, 3, 'Monitor', 1, '2023-05-15'),
+(105, NULL, 'Webcam', 3, '2023-05-18');
